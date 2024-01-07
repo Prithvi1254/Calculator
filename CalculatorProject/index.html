@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <form>
+                <div class="row1">
+
+                    <input type="text" class="display">
+                </div>
+                <div class="row2">
+                    <input type="button" value="AC" class="operator" onclick="
+                    document.querySelector('.display').value='';
+                    ">
+                    <input type="button" value="DEL" class="operator" onclick="
+                    let c=document.querySelector('.display').value;
+                    let ans=c.toString().slice(0,-1);
+                    document.querySelector('.display').value=ans;
+                    ">
+                    <input type="button" value="/" class="operator" onclick="
+                    document.querySelector('.display').value+='/';
+                    ">
+                    <input type="button" value="." class="operator" class="qq" onclick="
+                    document.querySelector('.display').value='*';
+                    ">
+                </div>
+                <div class="row3">
+                    <input type="button" value="7" onclick="
+                    document.querySelector('.display').value+='7';
+                    ">
+                    <input type="button" value="8" onclick="
+                    document.querySelector('.display').value+='8';
+                    ">
+                    <input type="button" value="9" onclick="
+                    document.querySelector('.display').value+='9';
+                    ">
+                    <input type="button" value="*" class="operator" onclick="
+                    document.querySelector('.display').value+='*';
+                    ">
+                </div>
+                <div class="row4">
+                    <input type="button" value="4" onclick="
+                    document.querySelector('.display').value+='4';
+                    ">
+                    <input type="button" value="5" onclick="
+                    document.querySelector('.display').value+='5';
+                    ">
+                    <input type="button" value="6" onclick="
+                    document.querySelector('.display').value+='6';
+                    ">
+                    <input type="button" value="-" class="operator" onclick="
+                    document.querySelector('.display').value+='-';
+                    ">
+                </div>
+                <div class="row5">
+                    <input type="button" value="1" onclick="
+                    document.querySelector('.display').value+='1';
+                    ">
+                    <input type="button" value="2" onclick="
+                    document.querySelector('.display').value+='2';
+                    ">
+                    <input type="button" value="3" onclick="
+                    document.querySelector('.display').value+='3';
+                    ">
+                    <input type="button" value="+" class="operator" onclick="
+                    document.querySelector('.display').value+='+';
+                    ">
+                </div>
+                <div class="row6">
+                    <input type="button" value="0" onclick="
+                    document.querySelector('.display').value+='0';
+                    ">
+                    <input type="button" value="00" onclick="
+                    document.querySelector('.display').value+='00';
+                    ">
+                    <input type="button" value="=" class="equal operator" onclick="
+                    let c1=document.querySelector('.display').value;
+                    let ans1=eval(c1);
+                    document.querySelector('.display').value=ans1;
+                    ">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>
